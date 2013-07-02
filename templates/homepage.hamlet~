@@ -1,0 +1,17 @@
+<div class=navbar class=navbar-fixed-top>
+    <div class=navbar-inner>
+        <div class=container>
+            <a class=brand>CloudTransit
+            <div class=nav-collapse class=collapse>
+                <ul class=nav>
+                    <li>
+                        <a>Product
+                <ul class=nav class=pull-right>
+                    <li>
+                        <a>About
+<div class=container>
+    <header class=jumbotron class=subhead>
+        <div class=row>
+            <div class=span6>
+                <h1>CloudTransit
+                <p class=lead>more coming soon...
