@@ -8,4 +8,3 @@ config/client_session_key.aes
 yesod-devel/
 *.*~
 static/combined/
-
