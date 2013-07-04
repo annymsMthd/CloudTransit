@@ -15,5 +15,8 @@ Staging:
   <<: *defaults
 
 Production:
-  #approot: "http://www.example.com"
+  approot: "http://www.cloud-transit.com"
+  analytics: UA-40464102-1
+  copyright: CloudTransit 2013
+  port: 80
   <<: *defaults
