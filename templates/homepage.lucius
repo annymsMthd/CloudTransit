@@ -17,25 +17,26 @@ body {
         }
     }
 
-    .header-container{
-        font-family: 'Kreon', serif;
+    .header-container{        
         margin-top: 60px;
         margin-left: 16px;  
+        text-align: center;
 
         pre {
+            font-family: 'Playfair Display', serif;
             opacity: 0.8;
             border: none;
-            color : #015E7D;           
-           
+            color : #015E7D;    
 
             h1 {
-                font-size: 22px;
+                font-size: 26px;
                 line-height: 20px;
                 margin: 0px;
             }
 
             .lead {
-                font-size: 16px;
+                font-size: 20px;
+                margin-bottom: 0px;
             }
         }        
     }
