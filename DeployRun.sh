@@ -1,3 +1,3 @@
 tar -zxvf CloudTransit.tar.gz
 cd CloudTransit
-sudo CloudTransit Production -p 80
+sudo /home/ubunutu/CloudTransit/CloudTransit Production -p 80
