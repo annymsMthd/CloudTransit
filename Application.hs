@@ -46,7 +46,7 @@ makeApplication conf = do
         }
 
     -- Create the WAI application and apply middlewares
-    app <- toWaiAppPlain foundation
+    app <- warp foundation
     return $ logWare app
 
 -- | Loads up any necessary settings, creates your foundation datatype, and
