@@ -24,7 +24,7 @@ $newline never
 
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
-    <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+    <body>
         ^{pageBody pc}
     
         $maybe analytics <- extraAnalytics $ appExtra $ settings master
