@@ -13,4 +13,4 @@ homeSpecs =
         yit "should have the company name in the h1" $ do
             get HomeR
             statusIs 200
-            htmlAllContain "h1" "CloudTransit"
+            htmlAllContain "h1" "Crowd Sourcing Public Transit"
