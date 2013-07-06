@@ -3,11 +3,10 @@
         <div .container>
             <a .brand href=@{HomeR}>CloudTransit
 
-<div .container-fluid .header-container>
+<div .container .header-container>
     <header .jumbotron .subhead>
-        <div .row-fluid>
+        <div .row>
             <pre .span8>
                 <h1>Crowd Sourcing Public Transit
                 <p .lead>CloudTransit's goal is to solve the hard problems facing public transit using its most valuable resource... you the transit rider. To do that we plan to code in the open. Allowing you the rider to view the code and make suggestions to improve it.
 
-<div #map>
