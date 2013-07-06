@@ -1,9 +1,39 @@
 body {
     font-family: 'Kreon', serif;
-    background: #00ff00 url('/static/img/sky.jpg') no-repeat fixed center;
+    color: #377491;
+    background-color: #EEEEEE;
+    background-image: url('/static/img/map.png');
+    
+    .navbar {        
+        background-color: #0099CB;
+
+        .navbar-inner {
+            background: none;
+        }
+
+        .brand {
+            color: #EEEEEE;
+            font-weight: 400;
+        }
+    }
 
     .header-container{
-        margin-top: 40px;
-        margin-left: 16px;    
+        font-family: 'Kreon', serif;
+        margin-top: 60px;
+        margin-left: 16px;  
+
+        pre {
+            opacity: 0.9;
+
+            h1 {
+                font-size: 20px;
+                line-height: 20px;
+                margin: 0px;
+            }
+
+            .lead {
+                font-size: 12px;
+            }
+        }        
     }
 }
