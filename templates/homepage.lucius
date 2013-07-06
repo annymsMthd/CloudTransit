@@ -1,6 +1,9 @@
 body {
+    font-family: 'Kreon', serif;
+    background: #00ff00 url('/static/img/sky.jpg') no-repeat fixed center;
+
     .header-container{
         margin-top: 40px;
-        margin-left: 65px;    
+        margin-left: 16px;    
     }
 }

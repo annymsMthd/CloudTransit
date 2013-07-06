@@ -6,9 +6,9 @@
                 <ul class=nav>
                 <ul class=nav class=pull-right>
 
-<div class=container class=header-container>
+<div class=container-fluid class=header-container>
     <header class=jumbotron class=subhead>
-        <div class=row>
+        <div class=row-fluid>
             <div class=span6>
-                <h1>CloudTransit
-                <p class=lead>more coming soon...
+                <h1>Crowd Sourcing Public Transit
+                <p class=lead>CloudTransit's goal is to solve the hard problems facing public transit using its most valuable resource... you the transit rider. To do that we plan to code in the open. Allowing you the rider to view the code and make suggestions to improve it.
