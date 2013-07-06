@@ -1,5 +1,5 @@
 body {
-    font-family: 'Kreon', serif;
+    font-family: 'Playfair Display', serif;
     color: #377491;
     background-color: #EEEEEE;
     background-image: url('/static/img/map.png');
