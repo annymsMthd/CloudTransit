@@ -85,6 +85,7 @@ instance Yesod App where
                 [ css_normalize_css
                 , css_bootstrap_css
                 , css_bootswatch_css
+                , css_bootstrap_responsive_min_css
                 ])
             $(combineScripts 'StaticR
                 [ js_jquery_min_js
