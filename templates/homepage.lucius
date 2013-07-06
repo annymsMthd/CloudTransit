@@ -23,16 +23,19 @@ body {
         margin-left: 16px;  
 
         pre {
-            opacity: 0.9;
+            opacity: 0.8;
+            border: none;
+            color : #015E7D;           
+           
 
             h1 {
-                font-size: 20px;
+                font-size: 22px;
                 line-height: 20px;
                 margin: 0px;
             }
 
             .lead {
-                font-size: 12px;
+                font-size: 16px;
             }
         }        
     }
