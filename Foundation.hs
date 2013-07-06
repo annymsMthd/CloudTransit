@@ -84,14 +84,11 @@ instance Yesod App where
             $(combineStylesheets 'StaticR
                 [ css_normalize_css
                 , css_bootstrap_css
-                , css_bootswatch_css
                 , css_bootstrap_responsive_min_css
                 ])
             $(combineScripts 'StaticR
                 [ js_jquery_min_js
                 , js_jquery_smooth_scroll_min_js
-                , js_bootstrap_min_js
-                , js_jquery_bootswatch_js
                 ])
             $(widgetFile "default-layout")
         giveUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
