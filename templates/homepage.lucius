@@ -39,10 +39,30 @@ body {
             }
         }        
     }
-    
-    @media (max-width: 767px) {
-        .header-container {
-            margin-top: 0px;    
+
+    .marketing {
+        text-align: center;
+
+         pre {
+            font-family: 'Playfair Display', serif;
+            opacity: 0.8;
+            border: none;
+            color : #015E7D;    
+            margin: 1em 0px;
+            padding : 0px;
+            line-height: 10px;
+            
+            h2 {
+                font-size: 24px;
+                line-height: 24px;
+                margin: 0px;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 18px;
+                margin: 0px;
+            }
         }
     }
 }
