@@ -10,7 +10,7 @@ toDegrees radian = 180 / pi * radian
 
 sin2 radian = sin radian ^ 2    
 
-getVelocity :: Km -> TimeMs -> KmPerMs
+getVelocity :: Km -> Ms -> KmPerMs
 getVelocity dist time = dist / time
  
 distance :: GpsPosition -> GpsPosition -> Km
