@@ -10,7 +10,10 @@ toDegrees radian = 180 / pi * radian
 
 sin2 radian = sin radian ^ 2    
 
-distance :: GpsPosition -> GpsPosition -> Double
+getVelocity :: Km -> TimeMs -> KmPerMs
+getVelocity dist time = dist / time
+ 
+distance :: GpsPosition -> GpsPosition -> Km
 distance pos1 pos2 = earthRadius * c
     where dLat = lat2 - lat1
           dLon = toRadians $ longitude pos2 - longitude pos1
@@ -28,10 +31,11 @@ bearing pos1 pos2 = toDegrees $ atan2 y x
           x = cos lat1 * sin lat2 - sin lat1 * cos lat2 * cos dLon
 
 positionDifference :: GpsPosition -> GpsPosition -> PositionDifference
-positionDifference gps1 gps2 = PositionDifference dist heading timeDifference
+positionDifference gps1 gps2 = PositionDifference dist heading timeDifference vel
     where dist = distance gps1 gps2
           heading  = bearing gps1 gps2
           timeDifference = time gps2 - time gps1
+          vel = getVelocity dist timeDifference
 
 compressPositions :: [GpsPosition] -> [PositionDifference]
 compressPositions positions =

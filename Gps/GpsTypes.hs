@@ -2,7 +2,9 @@ module GpsTypes where
 
 type Latitude = Double
 type Longitude = Double
-type TimeMs = Int
+type TimeMs = Double
+type KmPerMs = Double
+type Km = Double
 
 data GpsPosition = 
      GpsPosition { latitude  :: Latitude,
@@ -10,6 +12,7 @@ data GpsPosition =
                    time      :: TimeMs }
 
 data PositionDifference =
-     PositionDifference { distanceD :: Double,
+     PositionDifference { distanceD :: Km,
                           bearingD  :: Double,
-                          timeDif   :: TimeMs }
+                          timeDif   :: TimeMs,
+                          velocity  :: KmPerMs }
