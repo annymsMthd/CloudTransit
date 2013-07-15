@@ -24,13 +24,13 @@ distance pos1 pos2 = earthRadius * c
           c = 2 * atan2 (sqrt a) (sqrt $ 1-a)
 
 bearing :: GpsPosition -> GpsPosition -> Double
-bearing pos1 pos2 = mod' (brg + 360) 360.00
+bearing pos1 pos2 = mod' (brg + 360) 360
     where dLon = toRadians $ longitude pos2 - longitude pos1
           lat1 = toRadians $ latitude pos1
           lat2 = toRadians $ latitude pos2
           y = sin dLon * cos lat2
           x = cos lat1 * sin lat2 - sin lat1 * cos lat2 * cos dLon
-          brg = (atan2 y x) * 180/pi
+          brg = 180 / pi * atan2 y x
 
 destinationPoint :: GpsPosition -> PositionDifference -> GpsPosition
 destinationPoint origin diff = GpsPosition (toDegrees lat2) (toDegrees lng2) tm

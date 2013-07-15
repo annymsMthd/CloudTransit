@@ -9,11 +9,14 @@ test1 = TestCase $ do
                      let dist = distanceD $ head combined
                      let heading = bearingD $ head combined
                      let vel = velocity $ head combined
-                     (assertBool "time difference is correct" $ timeDif (head combined) == 20)
+                     let tD = timeDif $ head combined
+                     (assertBool ("time difference " ++ show tD ++ " should be 20") $ tD == 20)
                      (assertBool ("distance " ++ show dist ++ " shoud be 0.9141766102139338") $ 
                         dist == 0.9141766102139338)
-                     (assertBool ("velocity " ++ show vel ++ " should be 4.570883051069669e-2") $ vel == 4.570883051069669e-2)
-                     (assertBool ("heading " ++ show heading ++ " should be 89.50240746497025") $ heading == 89.50240746497025)
+                     (assertBool ("velocity " ++ show vel ++ " should be 4.570883051069669e-2") $ 
+                        vel == 4.570883051069669e-2)
+                     (assertBool ("heading " ++ show heading ++ " should be 89.50240746497025") $ 
+                        heading == 89.50240746497025)
 
 test2 = TestCase $ do
                      let gps1 = GpsPosition 34.064828 (-118.361379) 0
@@ -24,7 +27,13 @@ test2 = TestCase $ do
                      let path = gps1:gps2:gps3:gps4:gps5:[];
                      let combined = compressPositions $ path
                      let umcom = uncompressPositions [gps1] combined
-                     (assertBool "should have 2 gps positions" $ length umcom == 2)
-                     (assertEqual "should be the same gps positions" path umcom)
+                     let diff = [positionDifference (fst diff) (snd diff) | diff <- zip umcom path]
+                     (assertBool "should have 2 gps positions" $ length umcom == 5)
+                     (assertBool "should be the same gps positions" (all (<0.0000000001) [distanceD d | d <- diff]))
+                     (assertEqual "should be the same times" [time d | d <- path] [time d | d <- umcom])
 
 tests = TestList [TestLabel "combining two gps positions" test1, TestLabel "uncompressing list" test2]
+
+main = 
+    do        
+        runTestTT tests
