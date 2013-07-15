@@ -3,7 +3,7 @@ module Gps where
 import GpsTypes
 import Data.Fixed
 
-earthRadius = 6371
+earthRadius = 6378700
 
 toRadians degrees = pi / 180 * degrees
 
@@ -11,10 +11,10 @@ toDegrees radian = 180 / pi * radian
 
 sin2 radian = sin radian ^ 2    
 
-getVelocity :: Km -> Ms -> KmPerMs
+getVelocity :: Mtrs -> Ms -> MtrsPerMs
 getVelocity dist time = dist / time
  
-distance :: GpsPosition -> GpsPosition -> Km
+distance :: GpsPosition -> GpsPosition -> Mtrs
 distance pos1 pos2 = earthRadius * c
     where dLat = lat2 - lat1
           dLon = toRadians $ longitude pos2 - longitude pos1
@@ -56,6 +56,3 @@ compressPositions positions =
 uncompressPositions :: [GpsPosition] -> [PositionDifference] -> [GpsPosition]
 uncompressPositions origin (y:mr) = uncompressPositions (origin ++ [destinationPoint (last origin) y]) mr
 uncompressPositions origin [] = origin
-        
-
-    

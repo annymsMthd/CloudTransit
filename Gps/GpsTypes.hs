@@ -3,8 +3,8 @@ module GpsTypes where
 type Latitude = Double
 type Longitude = Double
 type Ms = Double
-type KmPerMs = Double
-type Km = Double
+type MtrsPerMs = Double
+type Mtrs = Double
 
 data GpsPosition = 
      GpsPosition { latitude  :: Latitude,
@@ -13,8 +13,8 @@ data GpsPosition =
      deriving (Show, Eq)
 
 data PositionDifference =
-     PositionDifference { distanceD :: Km,
+     PositionDifference { distanceD :: Mtrs,
                           bearingD  :: Double,
                           timeDif   :: Ms,
-                          velocity  :: KmPerMs }
+                          velocity  :: MtrsPerMs }
      deriving (Show, Eq)
