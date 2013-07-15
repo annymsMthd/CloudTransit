@@ -10,9 +10,11 @@ data GpsPosition =
      GpsPosition { latitude  :: Latitude,
                    longitude :: Longitude,
                    time      :: Ms }
+     deriving (Show, Eq)
 
 data PositionDifference =
      PositionDifference { distanceD :: Km,
                           bearingD  :: Double,
                           timeDif   :: Ms,
                           velocity  :: KmPerMs }
+     deriving (Show, Eq)
