@@ -1,0 +1,12 @@
+body {
+    font-family: 'Kreon', serif;
+    color: #051D4A;
+}
+body .nav-bar .navbar-inner .container .brand {
+    color: #051D4A;
+    font-weight: 400;
+}
+body .header-container {
+    margin-top: 40px;
+    margin-left: 16px;
+}

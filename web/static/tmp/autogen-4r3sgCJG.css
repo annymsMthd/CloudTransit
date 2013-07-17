@@ -1,0 +1,22 @@
+body {
+    font-family: 'Kreon', serif;
+    color: #377491;
+    background-color: #EEEEEE;
+}
+body .navbar {
+    background-color: #0099CB;
+}
+body .navbar .navbar-inner {
+    background: none;
+}
+body .navbar .brand {
+    color: #EEEEEE;
+    font-weight: 400;
+}
+body .header-container {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+body #map {
+    background-image: url('/static/img/map.png');
+}

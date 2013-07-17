@@ -1,0 +1,35 @@
+body {
+    font-family: 'Playfair Display', serif;
+    color: #377491;
+    background-color: #EEEEEE;
+    background-image: url('/static/img/map.png');
+}
+body .navbar {
+    background-color: #0099CB;
+}
+body .navbar .navbar-inner {
+    background: none;
+}
+body .navbar .brand {
+    color: #EEEEEE;
+    font-weight: 400;
+}
+body .header-container {
+    font-family: 'Kreon', serif;
+    margin-top: 60px;
+    margin-left: 16px;
+}
+body .header-container pre {
+    opacity: 0.9;
+    background-color: transparent;
+    border: none;
+    color : white;
+}
+body .header-container pre h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0px;
+}
+body .header-container pre .lead {
+    font-size: 12px;
+}

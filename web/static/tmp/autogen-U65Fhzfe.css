@@ -1,0 +1,8 @@
+body {
+    font-family: 'Kreon', serif;
+    background-image: url('/static/img/sky.jpg');
+}
+body .header-container {
+    margin-top: 40px;
+    margin-left: 16px;
+}

@@ -1,0 +1,1 @@
+var map=L.mapbox.map('map','annymsmthd.map-ws0slwxh')

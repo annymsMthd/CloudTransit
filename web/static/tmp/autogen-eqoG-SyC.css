@@ -1,0 +1,57 @@
+body {
+    font-family: 'Playfair Display', serif;
+    color: #377491;
+    background-color: #EEEEEE;
+    background-image: url('/static/img/map.png');
+}
+body .navbar {
+    background-color: #0099CB;
+}
+body .navbar .navbar-inner {
+    background: none;
+}
+body .navbar .brand {
+    color: #EEEEEE;
+    font-weight: 400;
+}
+body .header-container {
+    margin-top: 50px;
+    text-align: center;
+}
+body .header-container pre {
+    font-family: 'Playfair Display', serif;
+    opacity: 0.8;
+    border: none;
+    color : #015E7D;
+}
+body .header-container pre h1 {
+    font-size: 26px;
+    line-height: 20px;
+    margin: 0px;
+}
+body .header-container pre .lead {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+body .marketing {
+    text-align: center;
+}
+body .marketing pre {
+    font-family: 'Playfair Display', serif;
+    opacity: 0.8;
+    border: none;
+    color : #015E7D;
+    margin: 1em 0px;
+    padding : 0px;
+    line-height: 10px;
+}
+body .marketing pre h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0px;
+}
+body .marketing pre p {
+    font-size: 10px;
+    line-height: 10px;
+    margin: 0px;
+}
