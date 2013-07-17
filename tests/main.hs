@@ -9,11 +9,12 @@ import Yesod.Default.Config
 import Yesod.Test
 import Test.Hspec (hspec)
 import Application (makeFoundation)
-
 import HomeTest
+import GpsTest
 
 main :: IO ()
-main = do
+main = do    
+    hspec gpsSpecs
     conf <- Yesod.Default.Config.loadConfig $ (configSettings Testing)
                 { csParseExtra = parseExtra
                 }
@@ -21,3 +22,4 @@ main = do
     hspec $ do
         yesodSpec foundation $ do
             homeSpecs
+    

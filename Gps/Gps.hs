@@ -1,6 +1,9 @@
-module Gps where
+module Gps.Gps 
+    ( module Gps.Gps) where
 
-import GpsTypes
+import Prelude
+
+import Gps.GpsTypes
 import Data.Fixed
 
 earthRadius = 6378700
@@ -49,6 +52,11 @@ positionDifference gps1 gps2 = PositionDifference dist heading timeDifference ve
           timeDifference = time gps2 - time gps1
           vel = getVelocity dist timeDifference
 
+getHeadingMap :: GpsPosition -> GpsPosition -> Mtrs -> HeadingMap
+getHeadingMap gps1 gps2 startDistance = HeadingMap startDistance (startDistance + dist) hdg
+         where dist = distance gps1 gps2
+               hdg  = bearing gps1 gps2
+
 compressPositions :: [GpsPosition] -> [PositionDifference]
 compressPositions positions =
         [positionDifference (fst difference) (snd difference) | difference <- zip positions $ tail positions]
@@ -56,3 +64,10 @@ compressPositions positions =
 uncompressPositions :: [GpsPosition] -> [PositionDifference] -> [GpsPosition]
 uncompressPositions origin (y:mr) = uncompressPositions (origin ++ [destinationPoint (last origin) y]) mr
 uncompressPositions origin [] = origin
+
+getHeadingMapList :: [(GpsPosition, GpsPosition)] -> Mtrs -> [HeadingMap]
+getHeadingMapList [] _ = []
+getHeadingMapList (pair:rest) startDistance = newMap:(getHeadingMapList rest $ endDistance newMap)
+    where newMap = getHeadingMap (fst pair) (snd pair) startDistance
+    
+     

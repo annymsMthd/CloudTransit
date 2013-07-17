@@ -20,6 +20,9 @@ library
                      Settings.StaticFiles
                      Settings.Development
                      Handler.Home
+                     Gps.Gps
+                     Gps.GpsTypes
+                     GpsImport
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -87,6 +90,7 @@ test-suite test
     type:              exitcode-stdio-1.0
     main-is:           main.hs
     hs-source-dirs:    tests
+
     ghc-options:       -Wall
 
     build-depends: base
@@ -100,4 +104,5 @@ test-suite test
                  , monad-logger
                  , transformers
                  , hspec
+                 , QuickCheck
                  , HUnit

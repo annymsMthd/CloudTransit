@@ -7,13 +7,15 @@ module TestImport
     , runDB
     , Spec
     , Example
+    , module GpsImport
     ) where
 
 import Yesod.Test
+
 import Database.Persist hiding (get)
 import Database.Persist.Sql (SqlPersistM, runSqlPersistMPool)
 import Control.Monad.IO.Class (liftIO)
-
+import GpsImport
 import Foundation
 import Model
 
