@@ -14,7 +14,8 @@ import GpsTest
 
 main :: IO ()
 main = do    
-    hspec gpsSpecs
+    _ <- hspec gpsSpecs 
+    _ <- hspec gpsUncmprss
     conf <- Yesod.Default.Config.loadConfig $ (configSettings Testing)
                 { csParseExtra = parseExtra
                 }

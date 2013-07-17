@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 module GpsTest 
-    ( gpsSpecs
+    ( module GpsTest
     ) where
 
 import TestImport 
