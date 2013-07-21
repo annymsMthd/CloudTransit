@@ -1,0 +1,9 @@
+import qualified Data.ByteString.Char8 as B
+import System.Hardware.Serialport
+
+settings = SerialPortSettings CS9600 8 One NoParity NoFlowControl 10
+
+main = do
+        mybrick <- openSerial "/dev/ttyO4" settings
+        recieved <- recv mybrick 8
+        putStrLn (show recieved)
