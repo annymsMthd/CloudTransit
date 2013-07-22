@@ -22,6 +22,8 @@ library
                      Handler.Home
                      Gps.Gps
                      Gps.GpsTypes
+                     Gps.MessageTypes
+                     Gps.MessageTypeConversion
                      GpsImport
 
     if flag(dev) || flag(library-only)
@@ -73,7 +75,6 @@ library
                  , conduit                       >= 1.0
                  , monad-logger                  >= 0.3
                  , fast-logger                   >= 0.3
-
 executable         CloudTransit
     if flag(library-only)
         Buildable: False
@@ -106,3 +107,4 @@ test-suite test
                  , hspec
                  , QuickCheck
                  , HUnit
+                 , bytestring

@@ -1,8 +1,15 @@
 import GpsModule
 import Control.Concurrent
 
-main = do
-        forkIO $ do
-            startGpsModule
+channelReadLoop channel = do
+    message <- readChan channel
+    _ <- putStrLn (show message)
+    channelReadLoop channel
+
+main = do              
+        rmcChannel <- newChan
+        let gpsChannel = GpsModuleChannels rmcChannel
+        _ <- startGpsModule gpsChannel
+        _ <- channelReadLoop rmcChannel
         _ <- getLine
         putStrLn "test"
