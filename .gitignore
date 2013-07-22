@@ -8,5 +8,5 @@ config/client_session_key.aes
 yesod-devel/
 *.*~
 static/combined/
-web/GPS
-embedded/GPS
+web/GPS/
+embedded/GPS/

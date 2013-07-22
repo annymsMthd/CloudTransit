@@ -10,6 +10,4 @@ main = do
         rmcChannel <- newChan
         let gpsChannel = GpsModuleChannels rmcChannel
         _ <- startGpsModule gpsChannel
-        _ <- channelReadLoop rmcChannel
-        _ <- getLine
-        putStrLn "test"
+        channelReadLoop rmcChannel
