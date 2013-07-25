@@ -50,6 +50,7 @@ receive serialPort buffer channel = do
 
 serialHandlerFunction channel = do
                 port <- openSerial "/dev/ttyO4" settings
+                _ <- flush port
                 forkIO $ receive port B.empty channel
 
 startGpsModule channel = do        

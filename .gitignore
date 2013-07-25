@@ -1,3 +1,16 @@
+/embedded/Gps/Gps.hs
+/embedded/Gps/GpsTypes.hs
+/embedded/Gps/MessageTypeConversion.hs
+/embedded/Gps/MessageTypes.hs
+/embedded/GpsImport.hs
+/embedded/main
+/embedded/tests/GpsTest.hs
+/web/GpsImport.hs
+/web/tests/GpsTest.hs
+/web/Gps/Gps.hs
+/web/Gps/GpsTypes.hs
+/web/Gps/MessageTypeConversion.hs
+/web/Gps/MessageTypes.hs
 dist*
 static/tmp/
 config/client_session_key.aes
